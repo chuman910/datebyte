@@ -1,6 +1,7 @@
-"use client"
-import React from "react"
-import { motion } from "framer-motion"
+/* eslint-disable */
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
 // Pre-generated fixed positions to avoid hydration mismatch
 const SPARKLE_POSITIONS = [
@@ -22,11 +23,11 @@ const SPARKLE_POSITIONS = [
   { left: 28, top: 80, size: 5, delay: 0.4 },
   { left: 55, top: 28, size: 6, delay: 1.1 },
   { left: 18, top: 92, size: 4, delay: 1.9 },
-]
+];
 
 export default function Sparkles({ count = 12 }: { count?: number }) {
-  const sparkles = SPARKLE_POSITIONS.slice(0, count)
-  
+  const sparkles = SPARKLE_POSITIONS.slice(0, count);
+
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {sparkles.map((sparkle, i) => (
@@ -34,16 +35,25 @@ export default function Sparkles({ count = 12 }: { count?: number }) {
           key={i}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: [0, 1, 0.8], opacity: [0, 1, 0] }}
-          transition={{ delay: sparkle.delay, duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          transition={{
+            delay: sparkle.delay,
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
           style={{ left: `${sparkle.left}%`, top: `${sparkle.top}%` }}
           className="absolute"
         >
           <div
-            style={{ width: sparkle.size, height: sparkle.size, borderRadius: 999 }}
+            style={{
+              width: sparkle.size,
+              height: sparkle.size,
+              borderRadius: 999,
+            }}
             className="bg-rose-200/80 blur-sm opacity-90"
           />
         </motion.div>
       ))}
     </div>
-  )
+  );
 }

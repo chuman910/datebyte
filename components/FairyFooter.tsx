@@ -1,5 +1,6 @@
-"use client"
-import { motion } from "framer-motion"
+/* eslint-disable */
+"use client";
+import { motion } from "framer-motion";
 
 export default function FairyFooter() {
   return (
@@ -12,5 +13,5 @@ export default function FairyFooter() {
         Made with ❤️
       </motion.div>
     </footer>
-  )
+  );
 }

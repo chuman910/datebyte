@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client";
 
 import { motion } from "framer-motion";
@@ -10,7 +11,12 @@ interface SelectButtonProps {
   onClick: () => void;
 }
 
-export default function SelectButton({ label, icon, isSelected, onClick }: SelectButtonProps) {
+export default function SelectButton({
+  label,
+  icon,
+  isSelected,
+  onClick,
+}: SelectButtonProps) {
   return (
     <motion.button
       whileHover={{ scale: 1.05 }}

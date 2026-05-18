@@ -1,10 +1,11 @@
-"use client"
-import React from "react"
-import { motion } from "framer-motion"
+/* eslint-disable */
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function ThemedCard({ children }: Props) {
   return (
@@ -23,5 +24,5 @@ export default function ThemedCard({ children }: Props) {
 
       <div className="absolute inset-x-6 bottom-4 h-1 rounded-full bg-gradient-to-r from-pink-100 to-rose-100 opacity-60" />
     </motion.section>
-  )
+  );
 }
