@@ -98,7 +98,7 @@ export default function EnchantingDateProposalApp() {
   const steps = [
     <motion.div key="step0" className="text-center" {...fadeInUp}>
       <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-rose-500">
-        Will you go on a date with me?
+        Will you go on a blind date with me ?????
       </h1>
       <motion.img
         initial={{ opacity: 0, scale: 0.8 }}
